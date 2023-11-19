@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/Alternative-Uniswap-Interface/static/css/main.e50a43cd.css",
-    "main.js": "/Alternative-Uniswap-Interface/static/js/main.abaf42e9.js",
+    "main.css": "/Alternative-Uniswap-Interface/static/css/main.51471355.css",
+    "main.js": "/Alternative-Uniswap-Interface/static/js/main.d6ee36d5.js",
     "static/js/787.6b1a131c.chunk.js": "/Alternative-Uniswap-Interface/static/js/787.6b1a131c.chunk.js",
+    "static/media/qlogo.png": "/Alternative-Uniswap-Interface/static/media/qlogo.0235cb31e1f3d12dff5b.png",
+    "static/media/Starbirl.otf": "/Alternative-Uniswap-Interface/static/media/Starbirl.d78a3e59a375d11985de.otf",
+    "static/media/Steelbase DEMO.otf": "/Alternative-Uniswap-Interface/static/media/Steelbase DEMO.d217711faba2fd0e7438.otf",
     "index.html": "/Alternative-Uniswap-Interface/index.html",
-    "main.e50a43cd.css.map": "/Alternative-Uniswap-Interface/static/css/main.e50a43cd.css.map",
-    "main.abaf42e9.js.map": "/Alternative-Uniswap-Interface/static/js/main.abaf42e9.js.map",
+    "main.51471355.css.map": "/Alternative-Uniswap-Interface/static/css/main.51471355.css.map",
+    "main.d6ee36d5.js.map": "/Alternative-Uniswap-Interface/static/js/main.d6ee36d5.js.map",
     "787.6b1a131c.chunk.js.map": "/Alternative-Uniswap-Interface/static/js/787.6b1a131c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e50a43cd.css",
-    "static/js/main.abaf42e9.js"
+    "static/css/main.51471355.css",
+    "static/js/main.d6ee36d5.js"
   ]
 }
