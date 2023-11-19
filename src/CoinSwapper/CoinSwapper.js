@@ -68,6 +68,8 @@ const styles = (theme) => ({
 const useStyles = makeStyles({
   customFont: {
     fontFamily: 'Starbirl, Arial, sans-serif',
+    margin:5,
+
   },
   switchButton: {
     // ... other styles

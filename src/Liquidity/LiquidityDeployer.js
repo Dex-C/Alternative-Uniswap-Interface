@@ -49,8 +49,21 @@ const styles = (theme) => ({
   },
 });
 
-const useStyles = makeStyles(styles);
 
+const useStyles = makeStyles({
+  customFont: {
+    fontFamily: 'Starbirl, Arial, sans-serif',
+    margin:5,
+  },
+  switchButton: {
+    // ... other styles
+    fontFamily: 'MyCustomFont, Arial, sans-serif',
+  },
+  fullWidth: {
+    // ... other styles
+    fontFamily: 'MyCustomFont, Arial, sans-serif',
+  },
+});
 function LiquidityDeployer(props) {
   const classes = useStyles();
   const { enqueueSnackbar } = useSnackbar();
@@ -391,98 +404,7 @@ function LiquidityDeployer(props) {
         className={classes.balance}
       >
         <hr className={classes.hr} />
-        <Grid
-          container
-          item
-          className={classes.values}
-          direction="column"
-          alignItems="center"
-          spacing={2}
-        >
-          {/* Balance Display */}
-          <Typography variant="h6">Your Balances</Typography>
-          <Grid container direction="row" justifyContent="space-between">
-            <Grid item xs={6}>
-              <Typography variant="body1" className={classes.balance}>
-                {formatBalance(coin1.balance, coin1.symbol)}
-              </Typography>
-            </Grid>
-            <Grid item xs={6}>
-              <Typography variant="body1" className={classes.balance}>
-                {formatBalance(coin2.balance, coin2.symbol)}
-              </Typography>
-            </Grid>
-          </Grid>
-
-          <hr className={classes.hr} />
-
-          {/* Reserves Display */}
-          <Typography variant="h6">Reserves</Typography>
-          <Grid container direction="row" justifyContent="space-between">
-            <Grid item xs={6}>
-              <Typography variant="body1" className={classes.balance}>
-                {formatReserve(reserves[0], coin1.symbol)}
-              </Typography>
-            </Grid>
-            <Grid item xs={6}>
-              <Typography variant="body1" className={classes.balance}>
-                {formatReserve(reserves[1], coin2.symbol)}
-              </Typography>
-            </Grid>
-          </Grid>
-
-          <hr className={classes.hr} />
-
-          {/* Liquidity Tokens Display */}
-          <Typography variant="h6">Your Liquidity Pool Tokens</Typography>
-          <Grid container direction="row" justifyContent="center">
-            <Grid item xs={6}>
-              <Typography variant="body1" className={classes.balance}>
-                {formatReserve(liquidityTokens, "UNI-V2")}
-              </Typography>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Paper className={classes.paperContainer}>
-          {/*Red  Display to show the quote */}
-          <Grid
-            container
-            item
-            direction="column"
-            alignItems="center"
-            spacing={2}
-            className={classes.fullWidth}
-          >
-            {/* Tokens in */}
-            <Typography variant="h6">Tokens in</Typography>
-            <Grid container direction="row" justifyContent="space-between">
-              <Grid item xs={6}>
-                <Typography variant="body1" className={classes.balance}>
-                  {formatBalance(liquidityOut[0], coin1.symbol)}
-                </Typography>
-              </Grid>
-              <Grid item xs={6}>
-                <Typography variant="body1" className={classes.balance}>
-                  {formatBalance(liquidityOut[1], coin2.symbol)}
-                </Typography>
-              </Grid>
-            </Grid>
-
-            <hr className={classes.hr} />
-
-            {/* Liquidity Tokens Display */}
-            <Typography variant="h6">Liquidity Pool Tokens Out</Typography>
-            <Grid container direction="row" justifyContent="center">
-              <Grid item xs={6}>
-                <Typography variant="body1" className={classes.balance}>
-                  {formatReserve(liquidityOut[2], "UNI-V2")}
-                </Typography>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Paper>
-
-        <hr className={classes.hr} />
+ 
       </Grid>
       <Grid container direction="column" alignItems="center" spacing={2}>
         <LoadingButton
@@ -493,7 +415,7 @@ function LiquidityDeployer(props) {
           onClick={deploy}
         >
           <AccountBalanceIcon className={classes.buttonIcon} />
-          Deploy
+          <a className={classes.customFont}>Deploy</a>
         </LoadingButton>
       </Grid>
     </div>

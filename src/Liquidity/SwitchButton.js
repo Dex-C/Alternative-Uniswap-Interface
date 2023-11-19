@@ -23,29 +23,30 @@ export default function SwitchButton(props) {
   return (
     <div>
       <ButtonGroup size="large" variant="contained">
-        <Button
-          id="add-button"
-          color="primary"
-          text="white"
-          onClick={() => {
-            setDeploy(true);
-            changeStyles(true);
-          }}
-        >
-          Deploy Liquidity
-        </Button>
+      <Button
+  id="add-button"
+  color="primary"
+  style={{ fontFamily: 'Starbirl, Arial, sans-serif' }} // Add your custom font here
+  onClick={() => {
+    setDeploy(true);
+    changeStyles(true);
+  }}
+>
+  Deploy Liquidity
+</Button>
 
-        <Button
-          id="remove-button"
-          color="secondary"
-          text="white"
-          onClick={() => {
-            setDeploy(false);
-            changeStyles(false);
-          }}
-        >
-          Remove Liquidity
-        </Button>
+<Button
+  id="remove-button"
+  color="secondary"
+  style={{ fontFamily: 'Starbirl, Arial, sans-serif' }} // Add your custom font here
+  onClick={() => {
+    setDeploy(false);
+    changeStyles(false);
+  }}
+>
+  Remove Liquidity
+</Button>
+
       </ButtonGroup>
     </div>
   );
