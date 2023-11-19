@@ -60,7 +60,7 @@ function ConnectWalletPage() {
             className={classes.title}
             color="common.white"
           >
-            Please connect an Ethereum wallet to your browser to use the
+            Please connect an to Scroll Sepolia to use the
             application
           </Typography>
         </Paper>
@@ -74,8 +74,8 @@ function ConnectWalletPage() {
         alignItems="flex-end"
       >
         <p>
-          Alternative Uniswap Interface | Get AUT for use in the bakerloo testnet{" "}
-          <a href="https://faucet.bakerloo.autonity.network/">here</a>
+          Scroll Sepolia RPC can be addeed {" "}
+          <a href="https://chainlist.org/chain/534351">here</a>
         </p>
       </Grid>
     </div>

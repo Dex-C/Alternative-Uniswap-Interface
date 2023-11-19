@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Starbirl';
+    src: url('/public/fonts/starbirl/Starbirl.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Steelbase';
+    src: url('/public/fonts/steelbase/Steelbase\ DEMO.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+h5 {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Steelbase, Starbirl, sans-serif;
+  }
+  

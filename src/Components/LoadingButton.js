@@ -5,8 +5,10 @@ import red from "@material-ui/core/colors/red";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
-    margin: 0,
+    margin: 30,
     position: "relative",
+    fontFamily: 'MyCustomFont, Arial, sans-serif',
+    borderRadius:0,
   },
   progress: {
     color: green[500],
@@ -15,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
     left: "50%",
     marginTop: -12,
     marginLeft: -12,
+  },
+  customFont: {
+    fontFamily: 'Starbirl, Arial, sans-serif',
   },
 }));
 
@@ -25,6 +30,7 @@ export default function LoadingButton(props) {
     <div className={classes.wrapper}>
       <Button
         variant="contained"
+        border="0"
         color="primary"
         fullWidth
         disabled={loading || !valid}

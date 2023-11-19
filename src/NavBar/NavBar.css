@@ -1,28 +1,35 @@
 .Title {
-  background: #f4f4f4;
+  background: #ffffff;
   height: 50px;
   text-align: left;
   margin-left: 25%;
   font-size: 1rem;
 }
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Add other styles like padding, background, etc., as needed */
+}
+
 
 .NavbarItems {
-  background: #f4f4f4;
+  background: #ffffff;
   height: 80px;
   display: flex;
-  justify-content: left;
-  align-items: left;
+  justify-content: center;
+  align-items: center;
   font-size: 1.2rem;
-  width: 75%;
-  text-align: left;
-  margin-left: 25%;
+  width: 100%;
+  text-align: center;
 }
 
 .navbar-logo {
-  color: rgb(226, 23, 23);
-  justify-self: start;
-  margin-left: 0px;
+  margin:0px;
   cursor: pointer;
+  width: 400px;
+  margin-left: 10px;
 }
 
 .logo {

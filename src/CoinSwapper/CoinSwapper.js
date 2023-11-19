@@ -40,9 +40,11 @@ const styles = (theme) => ({
     zIndex: 1,
     margin: "-16px",
     padding: theme.spacing(0.5),
+    fontFamily: 'Starbirl, Arial, sans-serif',
   },
   fullWidth: {
     width: "100%",
+    fontFamily: 'Starbirl, Arial, sans-serif',
   },
   title: {
     textAlign: "center",
@@ -62,7 +64,20 @@ const styles = (theme) => ({
   },
 });
 
-const useStyles = makeStyles(styles);
+
+const useStyles = makeStyles({
+  customFont: {
+    fontFamily: 'Starbirl, Arial, sans-serif',
+  },
+  switchButton: {
+    // ... other styles
+    fontFamily: 'MyCustomFont, Arial, sans-serif',
+  },
+  fullWidth: {
+    // ... other styles
+    fontFamily: 'MyCustomFont, Arial, sans-serif',
+  },
+});
 
 function CoinSwapper(props) {
   const classes = useStyles();
@@ -331,9 +346,7 @@ function CoinSwapper(props) {
       {/* Coin Swapper */}
       <Container maxWidth="xs">
         <Paper className={classes.paperContainer}>
-          <Typography variant="h5" className={classes.title}>
-            Swap Coins
-          </Typography>
+
 
           <Grid container direction="column" alignItems="center" spacing={2}>
             <Grid item xs={12} className={classes.fullWidth}>
@@ -361,39 +374,7 @@ function CoinSwapper(props) {
 
             <hr className={classes.hr} />
 
-            {/* Balance Display */}
-            <Typography variant="h6">Your Balances</Typography>
-            <Grid container direction="row" justifyContent="space-between">
-              <Grid item xs={6}>
-                <Typography variant="body1" className={classes.balance}>
-                  {formatBalance(coin1.balance, coin1.symbol)}
-                </Typography>
-              </Grid>
-              <Grid item xs={6}>
-                <Typography variant="body1" className={classes.balance}>
-                  {formatBalance(coin2.balance, coin2.symbol)}
-                </Typography>
-              </Grid>
-            </Grid>
 
-            <hr className={classes.hr} />
-
-            {/* Reserves Display */}
-            <Typography variant="h6">Reserves</Typography>
-            <Grid container direction="row" justifyContent="space-between">
-              <Grid item xs={6}>
-                <Typography variant="body1" className={classes.balance}>
-                  {formatReserve(reserves[0], coin1.symbol)}
-                </Typography>
-              </Grid>
-              <Grid item xs={6}>
-                <Typography variant="body1" className={classes.balance}>
-                  {formatReserve(reserves[1], coin2.symbol)}
-                </Typography>
-              </Grid>
-            </Grid>
-
-            <hr className={classes.hr} />
 
             <LoadingButton
               loading={loading}
@@ -403,7 +384,7 @@ function CoinSwapper(props) {
               onClick={swap}
             >
               <LoopIcon />
-              Swap
+              <a className={classes.customFont}>Swap</a>
             </LoadingButton>
           </Grid>
         </Paper>
@@ -416,10 +397,7 @@ function CoinSwapper(props) {
         justifyContent="center"
         alignItems="flex-end"
       >
-        <p>
-        Alternative Uniswap Interface | Get AUT for use in the bakerloo testnet{" "}
-          <a href="https://faucet.bakerloo.autonity.network/">here</a>
-        </p>
+        
       </Grid>
     </div>
   );

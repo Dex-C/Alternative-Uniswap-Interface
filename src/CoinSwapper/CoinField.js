@@ -13,6 +13,8 @@ const useStyles = makeStyles((theme) => ({
     borderColor: COLORS.grey[300],
     borderWidth: "1px",
     borderStyle: "solid",
+    borderRadius: 5,
+    margin:20,
   },
   container_input: {
     padding: theme.spacing(1),
@@ -35,10 +37,13 @@ const useStyles = makeStyles((theme) => ({
   },
   fab: {
     zIndex: "0",
+    fontFamily: 'Starbirl, Arial, sans-serif',
+
   },
   input: {
     ...theme.typography.h5,
     width: "100%",
+    fontFamily: 'Starbirl, Arial, sans-serif',
   },
   inputBase: {
     textAlign: "right",

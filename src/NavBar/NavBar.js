@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { MenuItems } from "./MenuItems";
 import "./NavBar.css";
+import logo from './qlogo.png'; // Adjust the path to where your image is located
 
 class NavBar extends Component {
   state = { clicked: false };
@@ -9,11 +10,7 @@ class NavBar extends Component {
   render() {
     return (
       <nav>
-        <div className="Title">
-          <h1 className="navbar-logo">
-            Alternative Uniswap Interface
-          </h1>
-        </div>
+        <img src={logo} alt="Logo" className="navbar-logo" />
 
         <div className="NavbarItems">
           <ul className={`nav-menu`}>
